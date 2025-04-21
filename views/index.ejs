@@ -1,0 +1,26 @@
+
+<div class="container">
+  <h2>Forecast Your Instagram Post</h2>
+  <form action="/predict" method="POST" enctype="multipart/form-data">
+    <label>Caption:</label>
+    <textarea name="caption" placeholder="Write your caption here..." required></textarea>
+
+    <label>Hashtags (comma separated):</label>
+    <input type="text" name="hashtags" placeholder="#fun, #travel, #photography" required>
+
+    <label>Post Time:</label>
+    <input type="datetime-local" name="postTime" required>
+
+    <label>Region:</label>
+    <input type="text" name="region" placeholder="e.g. US, IN" required>
+
+    <label>Engagement Goal (optional):</label>
+    <input type="number" name="engagementGoal" placeholder="e.g. 5000">
+
+    <label>Media Upload:</label>
+    <input type="file" name="media" accept="image/*,video/*">
+
+    <button type="submit">Predict Reach</button>
+  </form>
+</div>
+

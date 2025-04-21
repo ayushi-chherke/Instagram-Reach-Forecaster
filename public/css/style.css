@@ -1,0 +1,300 @@
+/*body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background: #f4f6f8;
+    color: #333;
+  }
+  
+  header {
+    background-color: #0f62fe;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  header h1 a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 30px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+  }
+  
+  form input,
+  form textarea,
+  form button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+  }
+  
+  form textarea {
+    height: 100px;
+    resize: vertical;
+  }
+  
+  form button {
+    background-color: #0f62fe;
+    color: white;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  form button:hover {
+    background-color: #0353e9;
+  }
+  
+  .result-list {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .result-list li {
+    margin: 10px 0;
+    font-size: 1.2em;
+  }
+  
+  .back-link {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #0f62fe;
+    font-weight: bold;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #f1f1f1;
+    margin-top: 50px;
+  }
+  .tips-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 20px;
+  }
+  
+  .tips-list li {
+    background: #e8f0fe;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-left: 5px solid #0f62fe;
+    border-radius: 5px;
+  }
+  
+  */
+  /* Background Gradient + Bubbles */
+/* === Base Layout === */
+
+
+/* === Animations === */
+/* Body Background */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #a5c5c5, #549e9e,#9bc2c2);
+  background-size: 200% 200%;
+  animation: bgShift 10s ease infinite;
+  color: #333;
+}
+
+/* Smooth background movement */
+@keyframes bgShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+header {
+  background-color:  #6ba4a4;
+  color: white;
+  padding: 5px;
+  text-align: center;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 20px;
+}
+/* Form Container */
+.container {
+  max-width: 500px;
+  margin: 50px auto;
+  background: rgba(216, 252, 254, 0.9);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  animation: fadeSlide 0.8s ease-out;
+  backdrop-filter: blur(5px);
+ 
+}
+
+/* Slide-in animation */
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #344b57;
+}
+
+/* Form Fields */
+form label {
+  display: block;
+  margin-top: 20px;
+  font-weight: 600;
+  color: #444;
+}
+
+form input,
+form select {
+  width: 100%;
+  padding: 5px;
+  margin-top: 6px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1em;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+form input:focus,
+form select:focus {
+  border-color: #2a5f69;
+  box-shadow: 0 0 8px rgba(248, 181, 0, 0.3);
+  outline: none;
+}
+
+/* Submit Button */
+form button {
+  margin-top: 30px;
+  padding: 12px;
+  width: 100%;
+  background-color: #1e5d67;
+  color: white;
+  border: none;
+  font-weight: bold;
+  font-size: 1.1em;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #168194;
+}
+body::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.1), transparent 60%);
+  animation: pulse 10s ease-in-out infinite;
+  z-index: -1;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+footer {
+  text-align: center;
+  padding: 20px 10px;
+  margin-top: 380px;
+  background: linear-gradient(to right, #e0fcff, #b2fcff);
+  color: #555;
+  font-size: 0.95em;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+  animation: footerFade 1s ease-in-out;
+  border-top: 1px solid #b5e8f3;
+  flex: 1;
+}
+
+/* Fade-in animation for footer */
+@keyframes footerFade {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+footer p {
+  margin: 0;
+}
+
+footer a {
+  color: #7ae5f0;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+
+}
+
+footer a:hover {
+  color: #00b4d0
+}
+
+
+
+.input-group {
+  position: relative;
+  margin-top: 25px;
+}
+
+.input-group input,
+.input-group select {
+  width: 100%;
+  padding: 12px 10px 12px 10px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: none;
+  transition: border-color 0.3s ease;
+}
+
+.input-group label {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(255,255,255,0.8);
+  padding: 0 4px;
+  color: #999;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label,
+.input-group select:focus + label,
+.input-group select:not([value=""]) + label {
+  top: -8px;
+  font-size: 0.8em;
+  color: #00dbf8;
+}
+
+

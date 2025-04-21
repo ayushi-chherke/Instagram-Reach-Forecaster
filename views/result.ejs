@@ -1,0 +1,19 @@
+
+
+<div class="container">
+  <h2>📊 Forecast Results</h2>
+
+  <% if (result.reach) { %>
+    <ul class="result-list">
+      <li><strong>Predicted Reach:</strong> <%= result.reach %></li>
+      <li><strong>Estimated Likes:</strong> <%= result.likes %></li>
+      <li><strong>Estimated Comments:</strong> <%= result.comments %></li>
+     
+    </ul>
+  <% } else { %>
+    <p style="color:red;">An error occurred: <%= result.reach %></p>
+  <% } %>
+  <!-- <%= result.reach %> -->
+
+  <a href="/" class="back-link"> 🔙 Back to form</a>
+</div>
